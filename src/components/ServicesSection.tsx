@@ -47,7 +47,7 @@ function ServicesSection() {
   return (
     <section>
       <h2 className="text-xl font-semibold mb-6">Consulting Services Tailored to Your Growth Stage</h2>
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-3 gap-3">
         {services.map((service, index) => (
           <ServiceCard key={index} {...service} />
         ))}

@@ -1,8 +1,8 @@
 function Header() {
   return (
-    <header className="flex items-center space-x-2 px-6 pt-6">
-      <img src="/logo.svg" alt="Logo" className="w-6 h-6" />
-      <span className="font-semibold tracking-wide">BRICE MIMIFIR</span>
+    <header className="flex justify-center ">
+      <img src="" alt="Logo" className="" />
+      <span className="">BRICE MIMIFIR</span>
     </header>
   );
 }
