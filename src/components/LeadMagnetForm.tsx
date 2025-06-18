@@ -1,37 +1,60 @@
 import React, { useState } from 'react';
 
 function LeadMagnetForm() {
-  const [email, setEmail] = useState('');
-  const [submitted, setSubmitted] = useState(false);
+  const [email, setEmail] = useState<string>('');
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState<string | null>(null);
+
+  const validateEmail = (email: string) => /^\S+@\S+\.\S+$/.test(email);
 
   const handleDownload = async () => {
-    if (!email) return alert('Please enter your email.');
+    setError(null);
+    setSuccess(null);
 
-    // Appel à l'API GHL
+    if (!validateEmail(email)) {
+      setError("Veuillez entrer une adresse email valide.");
+      return;
+    }
+
+    // Si le téléchargement est déjà en cours, on affiche un message
+    if (loading) {
+      error ? setError("Un téléchargement est déjà en cours, veuillez patienter.") : setLoading(true);
+      return;
+    }
+    setLoading(true);
+
     try {
-      const response = await fetch('https://rest.gohighlevel.com/v1/contacts/', {
+      const response = await fetch('/api/leads/email-download', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${import.meta.env.VITE_GHL_API_KEY}`
         },
-        body: JSON.stringify({
-          email,
-          locationId: import.meta.env.VITE_GHL_LOCATION_ID,
-          firstName: "Lead Magnet",
-          customField: "Lead Magnet Download"
-        })
+        body: JSON.stringify({ email }),
       });
 
-      if (response.ok) {
-        setSubmitted(true);
-        window.open('/lead-magnet.pdf', '_blank'); // Téléchargement
-      } else {
-        alert("Erreur lors de l'envoi à GoHighLevel");
+      if (!response.ok) {
+        throw new Error('Erreur lors de l’envoi');
       }
+
+
+      success ? setSuccess("Merci ! Le téléchargement va commencer.") : setLoading(false);
+
+      // Téléchargement direct du fichier sans ouvrir nouvel onglet
+      const fileUrl = '/lead-magnet.pdf';
+      const link = document.createElement('a');
+      link.href = fileUrl;
+      link.download = 'lead-magnet.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      setEmail('');
     } catch (err) {
+      setError("Une erreur est survenue, veuillez réessayer.");
       console.error(err);
-      alert("Une erreur est survenue");
+    } finally {
+      setLoading(false);
     }
   };
 

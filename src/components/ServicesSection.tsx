@@ -30,17 +30,17 @@ const services = [
     ],
     note: "Ideal for small businesses or grant-winning fintechs",
     price: 2000
-  },
-  {
-    title: "Fintech & Blockchain Innovation Strategy",
-    description: [
-      "Use case analysis + solution design",
-      "Security, compliance, and architecture insights",
-      "Clarity on what to build and why"
-    ],
-    note: "Starting at fintech tier or more",
-    price: 2500
   }
+  // {
+  //   title: "Fintech & Blockchain Innovation Strategy",
+  //   description: [
+  //     "Use case analysis + solution design",
+  //     "Security, compliance, and architecture insights",
+  //     "Clarity on what to build and why"
+  //   ],
+  //   note: "Starting at fintech tier or more",
+  //   price: 2500
+  // }
 ];
 
 function ServicesSection() {
