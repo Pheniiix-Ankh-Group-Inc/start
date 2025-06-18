@@ -25,7 +25,7 @@ function LeadMagnetForm() {
     setLoading(true);
 
     try {
-      const response = await fetch('/api/leads/email-download', {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/leads/email-download`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ function LeadMagnetForm() {
       success ? setSuccess("Merci ! Le téléchargement va commencer.") : setLoading(false);
 
       // Téléchargement direct du fichier sans ouvrir nouvel onglet
-      const fileUrl = '/lead-magnet.pdf';
+      const fileUrl = 'await fetch(`${import.meta.env.VITE_API_BASE_URL}/leads/lead-magnet.pdf';
       const link = document.createElement('a');
       link.href = fileUrl;
       link.download = 'lead-magnet.pdf';
