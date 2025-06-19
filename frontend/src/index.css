@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  body {
+    @apply bg-[#162c54];
+  }
+
+  #root {
+    @apply container mx-auto;
+    @apply px-20 py-20;
+  }
+
+  h1, h2, h3 {
+    @apply text-white;
+  }
+
+  p {
+    @apply text-white;
+  }
+}
