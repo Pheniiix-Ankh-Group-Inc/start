@@ -19,7 +19,7 @@ function LeadMagnetForm() {
 
     // Si le téléchargement est déjà en cours, on affiche un message
     if (loading) {
-      error ? setError("Un téléchargement est déjà en cours, veuillez patienter.") : setLoading(true);
+     setError("Un téléchargement est déjà en cours, veuillez patienter.") ;
       return;
     }
     setLoading(true);
@@ -37,8 +37,8 @@ function LeadMagnetForm() {
         throw new Error('Erreur lors de l’envoi');
       }
 
-
-      success ? setSuccess("Merci ! Le téléchargement va commencer.") : setLoading(false);
+     setSuccess("Merci ! Le téléchargement va commencer.");
+     setLoading(false);
 
       // Téléchargement direct du fichier sans ouvrir nouvel onglet
       const fileUrl = 'await fetch(`${import.meta.env.VITE_API_BASE_URL}/leads/lead-magnet.pdf';
