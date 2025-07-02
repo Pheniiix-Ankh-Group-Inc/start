@@ -1,4 +1,4 @@
-import CallToAction from "./callToAction";
+import CallToAction from "./CallToAction";
 
 function NewsletterSection() {
   return (
