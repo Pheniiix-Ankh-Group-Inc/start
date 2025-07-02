@@ -1,4 +1,27 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+:root {
+  --color-bg-main: #011D40;
+  --color-bg-alt: #FFFFFF;
+  --color-primary: #00D1B2;
+  --color-text-dark: #000000;
+  --color-text-muted: #B0B8C1;
+  --color-bg-secondary: #00294E;
+}
 
+
+body {
+  background-color: var(--color-bg-main);
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Liens */
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

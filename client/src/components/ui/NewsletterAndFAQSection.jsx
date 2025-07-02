@@ -7,8 +7,8 @@ function NewsletterAndFAQSection() {
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-6">
         {/* Bloc Newsletter */}
         <div className="flex-1">
-          <div className="card bg-base-100 shadow-md h-full">
-            <div className="card-body justify-between">
+          <div className="card h-full">
+            <div className="card-body">
               <NewsletterSection />
             </div>
           </div>
@@ -16,7 +16,7 @@ function NewsletterAndFAQSection() {
 
         {/* Bloc FAQ */}
         <div className="flex-1">
-          <div className="card bg-base-100 shadow-md h-full">
+          <div className="card bg-[var(--color-bg-secondary)] h-full">
             <div className="card-body">
               <FAQSection />
             </div>

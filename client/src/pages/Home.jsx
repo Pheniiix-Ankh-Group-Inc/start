@@ -12,12 +12,10 @@ function Home() {
     <Layout >
       <HeroSection />
       <ServicesSection />
-      <CallToAction />
       <WhoThisIsFor />
       <LeadMagnetForm />
       <NewsletterAndFAQSection />
       <ClientReviewCarousel />
-      <CallToAction />
     </Layout>
   );
 }
