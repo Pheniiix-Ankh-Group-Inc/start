@@ -20,22 +20,21 @@ const reviews = [
 
 function ClientReviewCarousel() {
   return (
-    <section className="py-20">
+    <section className="py-10">
       <div className="max-w-4xl mx-auto px-4 text-center">
-        <h2 className="text-2xl font-bold mb-10 text-base-content">What Clients Say</h2>
-
+        <h2 className="text-2xl font-bold mb-10 text-[var(--color-bg-alt)]">What Clients Say</h2>
         <Swiper
           modules={[Autoplay, Pagination]}
-          autoplay={{ delay: 5000, disableOnInteraction: false }}
+          autoplay={{ delay: 10000, disableOnInteraction: false }}
           pagination={{ clickable: true }}
           loop={true}
           spaceBetween={30}
         >
           {reviews.map((review, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-base-100 p-8 rounded-xl shadow-md max-w-xl mx-auto">
-                <p className="italic text-base-content mb-4">“{review.quote}”</p>
-                <p className="font-semibold text-primary">— {review.name}</p>
+              <div className="bg-[var(--color-bg-alt)] p-8 rounded-xl shadow-md max-w-xl mx-auto">
+                <p className="italic mb-4">“{review.quote}”</p>
+                <p className="font-semibold">— {review.name}</p>
               </div>
             </SwiperSlide>
           ))}
