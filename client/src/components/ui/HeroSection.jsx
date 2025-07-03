@@ -2,7 +2,9 @@ function HeroSection() {
   return (
     <section className="hero ">
       <div className="hero-content text-center mx-auto px-4">
-      <div>
+        <div>
+          <div><img src="../src/assets/bm.png" alt="Hero Image" className="h-20 w-auto sm:h-24 mx-auto mb-6" /></div>
+
           <h1 className="text-[var(--color-bg-alt)] text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6">Build Smarter, Scale Faster — with Expert Tech Consulting for Startups and Small Businesses</h1>
 
           <p className="text-[var(--color-bg-alt)] text-lg sm:text-xl mb-4">
@@ -20,9 +22,9 @@ function HeroSection() {
             decisions that drive results.
           </p>
         </div>
-    </div>
+      </div>
     </section>
-    
+
   );
 }
 

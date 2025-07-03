@@ -1,6 +1,6 @@
 function WhoThisIsFor() {
   return (
-    <section className="text-[var(--color-bg-alt)] py-20">
+    <section className="text-[var(--color-bg-alt)] py-10">
       <div className="max-w-6xl mx-auto px-4">
 
         <div className="flex flex-col lg:flex-row gap-6">
