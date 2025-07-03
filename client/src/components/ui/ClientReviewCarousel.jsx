@@ -20,7 +20,7 @@ const reviews = [
 
 function ClientReviewCarousel() {
   return (
-    <section className="py-10">
+    <section className="py-15 px-4">
       <div className="max-w-4xl mx-auto px-4 text-center">
         <h2 className="text-2xl font-bold mb-10 text-[var(--color-bg-alt)]">What Clients Say</h2>
         <Swiper
@@ -32,7 +32,7 @@ function ClientReviewCarousel() {
         >
           {reviews.map((review, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-[var(--color-bg-alt)] p-8 rounded-xl shadow-md max-w-xl mx-auto">
+              <div className="bg-[var(--color-bg-alt)] text-[var(--color-text-dark)] p-8 rounded-xl shadow-md max-w-xl mx-auto">
                 <p className="italic mb-4">“{review.quote}”</p>
                 <p className="font-semibold">— {review.name}</p>
               </div>

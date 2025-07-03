@@ -14,7 +14,7 @@ function ServiceCard({ title, description, note, price }) {
           <p className="text-sm italic mt-4 bg-mutedText">{note}</p>
         )}
         <div className="mt-4">
-          <p className="text-lg font-bold">{price}</p>
+          {/* <p className="text-lg font-bold">{price}</p> */}
         </div>
       </div>
     </div>
