@@ -5,7 +5,7 @@ function ServiceCard({ title, description, note, price }) {
         <h3 className="card-title text-lg sm:text-xl font-semibold">{title}</h3>
         <ul className="list-disc pl-5 space-y-2 text-base-content">
           {description.map((item, idx) => (
-            <li key={idx} className="text-sm leading-relaxed">
+            <li key={idx} className="text-sm text-black leading-relaxed">
               {item}
             </li>
           ))}

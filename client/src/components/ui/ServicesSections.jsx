@@ -46,7 +46,7 @@ const services = [
 
 function ServicesSection() {
   return (
-    <section className="py-20 pb-8">
+    <section className="py-20 pb-8 text-black">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-[var(--color-bg-alt)] text-2xl sm:text-3xl font-bold text-center mb-12">Consulting Services Tailored to Your Growth Stage</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -55,7 +55,7 @@ function ServicesSection() {
           ))}
         </div>
       </div>
-       <CallToAction />
+      <CallToAction />
     </section>
   );
 }
