@@ -1,3 +1,5 @@
+import Logo from '../../assets/bm.png';
+
 function Footer() {
   return (
     <footer className="bg-[#011D40] text-white pt-10 text-sm">
@@ -5,7 +7,7 @@ function Footer() {
 
         {/* Bloc Logo et nom */}
         <div className="flex flex-col items-center sm:items-start">
-          <div><img src="../../src/assets/bm.png" alt="Hero Image" className="h-20 w-auto sm:h-24 mx-auto mb-6" /></div>
+          <div><img src={Logo} alt="Hero Image" className="h-20 w-auto sm:h-24 mx-auto mb-6" /></div>
 
           <p className="text-sm leading-relaxed">BM Consulting.</p>
         </div>
