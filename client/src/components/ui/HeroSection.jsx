@@ -1,10 +1,17 @@
-import Logo from '../../assets/bm.png';
+import svgUrl from '../../assets/bma.svg';
+
 function HeroSection() {
   return (
     <section className="hero ">
       <div className="hero-content text-center mx-auto px-4">
         <div>
-          <div><img src={Logo} alt="Hero Image" className="h-20 w-auto sm:h-24 mx-auto mb-6" /></div>
+
+          {/* <div><img src={Logo} alt="Hero Image" className="h-20 w-auto sm:h-24 mx-auto mb-6" /></div> */}
+
+          {/* Logo visible et centré */}
+          <div className="flex justify-center">
+            <img src={svgUrl} alt="Logo BMA" className="w-32 h-48" />
+          </div>
 
           <h1 className="text-[var(--color-bg-alt)] text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6">Build Smarter, Scale Faster — with Expert Tech Consulting for Startups and Small Businesses</h1>
 

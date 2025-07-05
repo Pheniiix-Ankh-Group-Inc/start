@@ -18,7 +18,7 @@ function FAQSection() {
             Do you build or code the solution?
           </div>
           <div className="collapse-content">
-              No. I’m your strategist: I map the path, your dev team (or partners) can execute.
+            No. I’m your strategist: I map the path, your dev team (or partners) can execute.
           </div>
         </div>
       </div>

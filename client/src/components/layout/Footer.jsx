@@ -1,32 +1,25 @@
-import Logo from '../../assets/bm.png';
+
+import svgUrl from '../../assets/bma.svg';
 
 function Footer() {
   return (
-    <footer className="bg-[#011D40] text-white pt-10 text-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 grid gap-8 sm:grid-cols-2 md:grid-cols-3 text-center sm:text-left">
-
-        {/* Bloc Logo et nom */}
-        <div className="flex flex-col items-center sm:items-start">
-          <div><img src={Logo} alt="Hero Image" className="h-20 w-auto sm:h-24 mx-auto mb-6" /></div>
-
-          <p className="text-sm leading-relaxed">BM Consulting.</p>
-        </div>
-
-        {/* Bloc Legal */}
-        <div className="flex flex-col items-center sm:items-start">
-          <h6 className="text-sm font-semibold mb-2">Légal</h6>
-          <ul className="space-y-1 text-sm">
-            <li><a href="#" className="hover:opacity-80 transition">Termes of use</a></li>
-            <li><a href="#" className="hover:opacity-80 transition">Privacy Policy</a></li>
-            <li><a href="#" className="hover:opacity-80 transition">Cookies Policy</a></li>
-          </ul>
-        </div>
-
-        {/* Bloc Réseaux sociaux */}
-        <div className="flex flex-col items-center sm:items-end">
-          <h6 className="text-sm font-semibold mb-2">Follow us</h6>
-          <div className="flex space-x-4">
+    <>
+      <footer className="footer sm:footer-horizontal bg-[#011D40] text-white pt-10">
+        <nav>
+          <img src={svgUrl} alt="BM logo" className="w-32 h-32 mb-1" />
+          <p className="">BM Consulting.</p>
+        </nav>
+        <nav>
+          <h5 className="font-bold mb-2">LEGAL</h5>
+          <a href="#" className="hover:opacity-80 transition">Termes of use</a>
+          <a href="#" className="hover:opacity-80 transition">Privacy Policy</a>
+          <a href="#" className="hover:opacity-80 transition">Cookies Policy</a>
+        </nav>
+        <nav>
+          <h5 className="font-bold mb-2">FOLLOW US</h5>
+          <div className="grid grid-flow-col gap-4">
             {/* Instagram */}
+
             <a
               href="https://www.instagram.com/bricemimifir/"
               target="_blank"
@@ -50,15 +43,19 @@ function Footer() {
               <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.794-1.75-1.766s.784-1.766 1.75-1.766c.965 0 1.75.794 1.75 1.766s-.785 1.766-1.75 1.766zm13.5 11.268h-3v-5.604c0-3.368-4-3.114-4 0v5.604h-3v-10h3v1.528c1.396-2.586 7-2.777 7 2.476v5.996z" />              </svg>
             </a>
-          </div>
-        </div>
-      </div>
 
-      {/* Copyright */}
-      <div className="border-t border-white/20 mt-10 px-4 py-4 text-center text-xs sm:text-sm">
-        &copy; {new Date().getFullYear()} Brice Mimifir Consulting. Tous droits réservés.
-      </div>
-    </footer>
+          </div>
+
+
+        </nav>
+      </footer>
+      <footer>
+        <div className="border-t border-white/20 mt-10 px-4 py-4 text-center text-xs sm:text-sm">
+          &copy; {new Date().getFullYear()} Brice Mimifir Consulting. Tous droits réservés.
+        </div>
+
+      </footer>
+    </>
   );
 }
 

@@ -59,7 +59,7 @@ function LeadMagnetForm() {
   };
 
   return (
-    <section className="bg-[var(--color-bg-alt)] p-8 rounded-xl max-w-6xl shadow-md mx-auto mt-10">
+    <section className="bg-[var(--color-bg-alt)] text-black p-8 rounded-xl max-w-6xl shadow-md mx-auto mt-10">
       <h3 className="text-2xl font-bold mb-2">Want a head start?</h3>
       <p className='mb-4'>Download “The 5 Step Digital Roadmap for startups” and get a free clarity call.</p>
 
@@ -67,7 +67,7 @@ function LeadMagnetForm() {
         <input
           type="email"
           placeholder="Email address"
-          className="input input-bordered w-full"
+          className="input bg-white w-full border border-gray-300"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />

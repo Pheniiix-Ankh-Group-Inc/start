@@ -6,6 +6,17 @@
  
 ### Fixed
 
+## [1.2.2] - 2025-07-04
+### Fixed
+
+- Fix logo breadcrump
+- Fix footer
+
+
+## [1.2.1] - 2025-07-02
+### Fixed
+
+- Fix logo breadcrump
 
 ## [1.2.1] - 2025-07-02
 ### Fixed
