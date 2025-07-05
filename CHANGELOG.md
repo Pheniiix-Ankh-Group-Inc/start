@@ -18,6 +18,11 @@
 
 - Fix logo breadcrump
 
+## [1.2.1] - 2025-07-02
+### Fixed
+
+- Fix logo breadcrump
+
 ## [1.2.0] - 2025-07-02
 ### Added
 

@@ -1,9 +1,11 @@
 import svgUrl from '../../assets/bma.svg';
+
 function HeroSection() {
   return (
     <section className="hero ">
       <div className="hero-content text-center mx-auto px-4">
         <div>
+
           {/* <div><img src={Logo} alt="Hero Image" className="h-20 w-auto sm:h-24 mx-auto mb-6" /></div> */}
 
           {/* Logo visible et centré */}

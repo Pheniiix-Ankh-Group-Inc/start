@@ -1,3 +1,4 @@
+
 import svgUrl from '../../assets/bma.svg';
 
 function Footer() {
