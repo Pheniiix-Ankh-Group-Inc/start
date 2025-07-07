@@ -6,6 +6,19 @@
  
 ### Fixed
 
+## [1.3.0] - 2025-07-07
+
+### Added
+
+- Add appointment page
+- Add Calendly
+- Add navigation rule
+
+### Fixed
+
+- fix footer design for mobile
+
+
 ## [1.2.2] - 2025-07-04
 ### Fixed
 

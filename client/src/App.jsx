@@ -1,9 +1,15 @@
 import './App.css'
-import Home from './pages/Home'
+
+import { BrowserRouter as Router } from 'react-router-dom';
+import AppRouter from './routes/AppRouter';
 
 function App() {
   // This is the main entry point of the application
-  return <Home />;
+  return (
+    <Router>
+      <AppRouter />
+    </Router>
+  );
 }
 
 export default App
