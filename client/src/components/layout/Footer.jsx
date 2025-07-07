@@ -4,10 +4,9 @@ import svgUrl from '../../assets/bma.svg';
 function Footer() {
   return (
     <>
-      <footer className="footer sm:footer-horizontal bg-[#011D40] text-white pt-10">
-        <nav>
-          <img src={svgUrl} alt="BM logo" className="w-32 h-32 mb-1" />
-          <p className="">BM Consulting.</p>
+      <footer className="footer flex flex-col md:flex-row justify-around items-center text-center md:text-left bg-[#011D40] text-white pt-10">
+        <nav className="">
+          <img src={svgUrl} alt="BM logo" className="w-32 h-28 mb-1" />
         </nav>
         <nav>
           <h5 className="font-bold mb-2">LEGAL</h5>
