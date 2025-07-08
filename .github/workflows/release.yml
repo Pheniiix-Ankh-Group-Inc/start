@@ -22,12 +22,10 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-        working-directory: client
         env:
           HUSKY: 0
 
       - name: Semantic Release
         run: npx semantic-release
-        working-directory: client
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
