@@ -23,6 +23,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
         working-directory: client
+        env:
+          HUSKY: 0
 
       - name: Semantic Release
         run: npx semantic-release
