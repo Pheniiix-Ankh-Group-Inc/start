@@ -1,3 +1,7 @@
+## <small>1.0.2 (2025-07-08)</small>
+
+* fix(json): fix package json semantic ([160e5e6](https://github.com/Pheniiix-Ankh-Group-Inc/start/commit/160e5e6))
+
 ## <small>1.0.1 (2025-07-08)</small>
 
 * fix(git): fix deploy base on tag ([bb30760](https://github.com/Pheniiix-Ankh-Group-Inc/start/commit/bb30760))
