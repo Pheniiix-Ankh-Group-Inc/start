@@ -2,7 +2,7 @@ name: Deploy to S3
 
 on:
   workflow_run:
-    workflows: ["Semantic Release"]
+    workflows: ["Semantic Release"] # Nom exact du workflow de release
     types:
       - completed
 
@@ -23,7 +23,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 0 # Important pour avoir accès aux tags
 
       - name: Configure AWS credentials via OIDC
         uses: aws-actions/configure-aws-credentials@v2
@@ -55,6 +55,7 @@ jobs:
 
       - name: Invalidate CloudFront cache
         run: |
+          echo "Triggering CloudFront invalidation for /*"
           aws cloudfront create-invalidation \
             --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
             --paths '/*'
