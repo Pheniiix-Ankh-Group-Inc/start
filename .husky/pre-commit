@@ -1,0 +1,5 @@
+#!/bin/sh
+# Ici tu peux lancer les commandes que tu veux avant commit, par exemple lint, tests, etc.
+
+# Exemple simple sans exit 1
+exit 0
