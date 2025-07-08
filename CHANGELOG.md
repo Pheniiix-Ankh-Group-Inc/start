@@ -1,3 +1,7 @@
+## <small>1.0.1 (2025-07-08)</small>
+
+* fix(git): fix deploy base on tag ([bb30760](https://github.com/Pheniiix-Ankh-Group-Inc/start/commit/bb30760))
+
 ## 1.0.0 (2025-07-08)
 
 * fix(git): fix automation for github tag ([96a0d66](https://github.com/Pheniiix-Ankh-Group-Inc/start/commit/96a0d66))
