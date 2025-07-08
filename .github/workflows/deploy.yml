@@ -1,17 +1,19 @@
 name: Deploy to S3
 
 on:
-  push:
-    tags:
-      - 'v*.*.*' # Déclenchement sur les tags de version
+  workflow_run:
+    workflows: ["Semantic Release"]
+    types:
+      - completed
 
 jobs:
   deploy:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     name: Deploy Frontend to S3
     runs-on: ubuntu-latest
     permissions:
-      id-token: write      # Pour OIDC
-      contents: read       # Pour checkout
+      id-token: write
+      contents: read
 
     defaults:
       run:
@@ -20,6 +22,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Configure AWS credentials via OIDC
         uses: aws-actions/configure-aws-credentials@v2
@@ -36,8 +40,7 @@ jobs:
         run: npm run build
 
       - name: Sync all files to S3
-        run: |
-          aws s3 sync dist/ s3://anhk --delete
+        run: aws s3 sync dist/ s3://anhk --delete
 
       - name: Fix MIME types for JS files
         run: |
@@ -49,7 +52,11 @@ jobs:
 
       - name: Fix MIME type for index.html
         run: aws s3 cp dist/index.html s3://anhk/index.html --content-type text/html
+
+      - name: Invalidate CloudFront cache
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
+            --paths '/*'
         env:
           AWS_REGION: ca-central-1
-          AWS_S3_BUCKET: anhk
-          SOURCE_DIR: client/dist
